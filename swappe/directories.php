@@ -1,0 +1,1 @@
+<?php $imgpath = "http://localhost/swappe/images/"; ?>

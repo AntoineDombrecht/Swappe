@@ -1,0 +1,32 @@
+
+Ajout du fichier cible-resetMdp et installation d'un simulateur d'envoie de mail
+
+Install sendmail.exe
+configure sendmail.ini like this :
+
+[sendmail] 
+smtp_server=smtp.gmail.com 
+smtp_port=587 
+default_domain=gmail.com 
+error_logfile=error.log 
+auth_username=swappe.com@gmail.com 
+auth_password=I8kopubV+-*/
+pop3_server= 
+pop3_username= 
+pop3_password= 
+force_sender=swappe.com@gmail.com 
+force_recipient= 
+hostname=
+
+configure php.ini like this :
+
+go to the "[mail function]" section and uncomment these lines
+
+
+[mail function]
+SMTP = localhost
+smtp_port = 465
+sendmail_from ="admin@wampserver.invalid"
+; REPLACE THE PATH BY THE ACTUAL PATH OF YOUR SENDMAIL SOFTWARE ↓
+sendmail_path = "C:\wamp64\sendemail\sendmail.exe -t -i" 
+mail.add_x_header = On
